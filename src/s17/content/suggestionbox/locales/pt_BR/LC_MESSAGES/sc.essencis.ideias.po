@@ -1,0 +1,47 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: s17.content.suggestionbox\n"
+"POT-Creation-Date: YEAR-MO-DA HO:MI +ZONE\n"
+"PO-Revision-Date: 2012-02-20 18:13-0300\n"
+"Last-Translator: Gustavo Lepri <lepri@simplesconsultoria.com.br>\n"
+"Language-Team: Simples Consultoria <lepri@simplesconsultoria.com.br>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"Language-Code: pt-br\n"
+"Language-Name: Brazilian Portuguese\n"
+"Preferred-Encodings: utf-8 latin1\n"
+"Domain: s17.content.suggestionbox\n"
+
+#: ../content.py:22
+msgid "Body text"
+msgstr "Corpo do texto"
+
+#: ../content.py:14
+msgid "Image"
+msgstr "Imagem"
+
+#: ../profiles/default/types/sc.essencis.ideias.ideafolder.xml
+msgid "Panel ideas"
+msgstr "Painel de suggestionbox"
+
+#: ../profiles/default/types/sc.essencis.ideias.idea.xml
+msgid "Participation"
+msgstr "Participação"
+
+#. Default: "Files"
+#: ../templates/idea_view.pt:47
+msgid "idea_files"
+msgstr "Arquivos"
+
+#. Default: "Images"
+#: ../templates/idea_view.pt:29
+msgid "idea_images"
+msgstr "Images"
+
+#. Default: "Participations"
+#: ../templates/ideafolder_view.pt:17
+msgid "ideasfolder_title"
+msgstr "Participações"
+

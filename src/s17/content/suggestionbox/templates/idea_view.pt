@@ -1,0 +1,77 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+      lang="en"
+      metal:use-macro="context/main_template/macros/master"
+      i18n:domain="sc.essencis.ideias">
+<body>
+
+<metal:main fill-slot="main">
+    <tal:main-macro metal:define-macro="main">
+
+        <div tal:content="structure here/@@rate-if-you-dare"/>
+
+        <div tal:replace="structure provider:plone.abovecontenttitle" />
+
+        <h1 class="documentFirstHeading" tal:content="context/title" />
+
+        <div tal:replace="structure provider:plone.belowcontenttitle" />
+
+        <p class="documentDescription" tal:content="context/description" />
+
+        <div tal:replace="structure provider:plone.abovecontentbody" />
+
+        <div tal:content="structure view/w/text/render" />
+
+        <tal:block condition="view/images">
+            <fieldset>
+                <legend i18n:translate="idea_images">Images</legend>
+                <tal:images tal:repeat="image view/images">
+                    <div class="photoAlbumEntry">
+                        <a tal:attributes="href string:${image/absolute_url}/view;
+                                        title image/Description">
+                    <span class="photoAlbumEntryWrapper">
+                        <img src="" alt="" tal:replace="structure python:image.tag(scale='thumb', title=image.Description())" />
+                    </span>
+                    <span class="photoAlbumEntryTitle" tal:content="image/pretty_title_or_id">
+                       Title
+                    </span>
+                        </a>
+                    </div>
+                </tal:images>
+            </fieldset>
+        </tal:block>
+        <tal:block condition="view/files">
+            <fieldset id="">
+                <legend i18n:translate="idea_files">Files</legend>
+                <ul class="visualNoMarker">
+                    <tal:related tal:repeat="item view/files">
+                        <li tal:define="desc item/Description;
+                                item_type item/portal_type;
+                                portal context/@@plone_portal_state/portal;
+                                putils portal/plone_utils;
+                                item_type_class python:'contenttype-' + putils.normalizeString(item_type);
+                                item_wf_state item/review_state | python:getInfoFor(item, 'review_state', '');
+                                item_wf_state_class python:'state-' + putils.normalizeString(item_wf_state);
+                                item_url item/getURL;">
+                    <span tal:attributes="class item_type_class">
+                        <a href="" class="visualIconPadding"
+                           tal:attributes="href item_url;
+                                           title desc;"
+                           tal:content="item/pretty_title_or_id">
+                        </a>
+                    </span>
+                        </li>
+                    </tal:related>
+                </ul>
+            </fieldset>
+        </tal:block>
+
+        <div tal:replace="structure provider:plone.belowcontentbody" />
+
+    </tal:main-macro>
+</metal:main>
+
+</body>
+</html>

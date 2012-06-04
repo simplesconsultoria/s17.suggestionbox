@@ -1,0 +1,51 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2012-03-09 22:01+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"Language-Code: en\n"
+"Language-Name: English\n"
+"Preferred-Encodings: utf-8 latin1\n"
+"Domain: DOMAIN\n"
+
+#: ../content.py:15
+msgid ""
+msgstr ""
+
+#: ../content.py:22
+msgid "Body text"
+msgstr ""
+
+#: ../content.py:14
+msgid "Image"
+msgstr ""
+
+#: ../profiles/default/types/sc.essencis.ideias.ideafolder.xml
+msgid "Panel ideas"
+msgstr ""
+
+#: ../profiles/default/types/sc.essencis.ideias.idea.xml
+msgid "Participation"
+msgstr ""
+
+#. Default: "Files"
+#: ../templates/idea_view.pt:47
+msgid "idea_files"
+msgstr ""
+
+#. Default: "Images"
+#: ../templates/idea_view.pt:29
+msgid "idea_images"
+msgstr ""
+
+#. Default: "Participations"
+#: ../templates/ideafolder_view.pt:17
+msgid "ideasfolder_title"
+msgstr ""
+

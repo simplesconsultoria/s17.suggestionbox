@@ -1,0 +1,72 @@
+This functional test simulates que funcionality of the ideas package.
+
+Initial setup
+=============
+In this part of the test we authenticate in the site to create the initial
+structure.
+
+    >>> app = layer['app']
+    >>> portal = layer['portal']
+    >>> request = layer['request']
+
+    >>> from cStringIO import StringIO
+    >>> from plone.testing.z2 import Browser
+    >>> browser = Browser(app)
+    >>> browser.handleErrors = False  # see original exceptions
+    >>> portal_url = portal.absolute_url()
+
+    >>> from plone.app.testing import SITE_OWNER_NAME, SITE_OWNER_PASSWORD
+    >>> browser.open(portal_url + '/login_form')
+    >>> browser.getControl(name='__ac_name').value = SITE_OWNER_NAME
+    >>> browser.getControl(name='__ac_password').value = SITE_OWNER_PASSWORD
+    >>> browser.getControl(name='submit').click()
+
+    >>> 'Você agora está autenticado' in browser.contents
+    True
+
+As admin, we create a Panel Ideas to include the ideas in there:
+
+    >>> browser.open(portal_url)
+    >>> browser.getLink('Painel de ideias').click()
+    >>> browser.getControl('Título').value = 'Painel de Ideias'
+    >>> browser.getControl('Descrição').value = 'Um painel de ideias'
+    >>> from zope.app.file.tests.test_image import zptlogo
+    >>> ctrl = browser.getControl(name='form.widgets.image')
+    >>> ctrl.add_file(StringIO(zptlogo), 'image/gif', 'zpt.gif')
+    >>> browser.getControl('Salvar').click()
+    >>> 'Item criado' in browser.contents
+    True
+
+Adding an idea
+--------------
+Now we add some ideas in the painel idea.
+    >>> browser.getLink('Participação').click()
+    >>> browser.getControl('Título').value = 'Uma ideia'
+    >>> browser.getControl('Descrição').value = 'Uma nova ideia'
+    >>> browser.getControl(name='form.widgets.text').value = "<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Proin eget dui. Phasellus tristique adipiscing justo. Vestibulum mattis, lorem vitae tristique molestie, turpis mi congue ligula, eget placerat libero mi quis massa. Proin pretium dictum nulla.</p>"
+    >>> browser.getControl('Salvar').click()
+    >>> 'Item criado' in browser.contents
+    True
+
+An idea can contain images:
+
+    >>> browser.getLink('Página Inicial').click()
+    >>> browser.getLink('Painel de Ideias').click()
+    >>> browser.getLink('Uma ideia').click()
+    >>> browser.getLink('Imagem').click()
+    >>> from zope.app.file.tests.test_image import zptlogo
+    >>> ctrl = browser.getControl(name='image_file')
+    >>> ctrl.add_file(StringIO(zptlogo), 'image/gif', 'zpt.gif')
+    >>> browser.getControl('Salvar').click()
+    >>> 'Alterações salvas' in browser.contents
+    True
+
+An idea can contain files:
+
+    >>> browser.getLink('Uma ideia').click()
+    >>> browser.getLink('Arquivo').click()
+    >>> ctrl = browser.getControl(name='file_file')
+    >>> ctrl.add_file(StringIO('File contents'), 'text/plain', 'test.txt')
+    >>> browser.getControl('Salvar').click()
+    >>> 'Alterações salvas' in browser.contents
+    True

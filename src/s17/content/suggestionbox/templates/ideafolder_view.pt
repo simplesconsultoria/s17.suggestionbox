@@ -1,0 +1,39 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+      lang="en"
+      metal:use-macro="context/main_template/macros/master"
+      i18n:domain="sc.essencis.ideias">
+<body>
+
+<metal:main fill-slot="content-core">
+    <tal:main-macro metal:define-macro="content-core">
+        <div class="newsImageContainer" tal:condition="context/image">
+            <img tal:define="image context/@@images"
+                 tal:replace="structure python:image.scale('image', scale='mini').tag()" />
+        </div>
+
+        <h2 class="documentFirstHeading"
+            i18n:translate="ideasfolder_title">Participations</h2>
+        <ul>
+            <li tal:repeat="content context/keys">
+                <tal:block define="file python:context[content]">
+                    <div class="discreet">
+                    <span tal:define="toLocalizedTime nocall:context/@@plone/toLocalizedTime"
+                          tal:replace="python:toLocalizedTime(file.ModificationDate(), long_format=1)">10/10/2010</span>
+                        &ndash; <span tal:replace="file/Creator">Fulano da Silva</span>
+                    </div>
+                    <a title=""
+                       tal:attributes="href string:${file/absolute_url};
+                                       title file/Title;">
+                        <span tal:replace="file/Title">Title</span>
+                    </a>
+                </tal:block>
+            </li>
+        </ul>
+    </tal:main-macro>
+</metal:main>
+
+</body>
+</html>
