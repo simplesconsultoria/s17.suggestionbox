@@ -7,8 +7,8 @@ from plone.app.testing import TEST_USER_NAME
 from plone.app.testing import login
 from plone.app.testing import setRoles
 
-from sc.essencis.ideias.config import PROJECTNAME
-from sc.essencis.ideias.testing import INTEGRATION_TESTING
+from s17.content.suggestionbox.config import PROJECTNAME
+from s17.content.suggestionbox.testing import INTEGRATION_TESTING
 
 DEPENDENCIES = (
     'collective.upload',

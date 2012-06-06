@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2012-03-09 22:01+0000\n"
+"POT-Creation-Date: 2012-06-06 13:59+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -26,26 +26,26 @@ msgstr ""
 msgid "Image"
 msgstr ""
 
-#: ../profiles/default/types/sc.essencis.ideias.ideafolder.xml
-msgid "Panel ideas"
+#: ../profiles/default/types/s17.content.suggestionbox.suggestion.xml
+msgid "Suggestion"
 msgstr ""
 
-#: ../profiles/default/types/sc.essencis.ideias.idea.xml
-msgid "Participation"
+#: ../profiles/default/types/s17.content.suggestionbox.suggestionbox.xml
+msgid "Suggestion box"
 msgstr ""
 
 #. Default: "Files"
-#: ../templates/idea_view.pt:47
+#: ../templates/suggestion_view.pt:47
 msgid "idea_files"
 msgstr ""
 
 #. Default: "Images"
-#: ../templates/idea_view.pt:29
+#: ../templates/suggestion_view.pt:29
 msgid "idea_images"
 msgstr ""
 
 #. Default: "Participations"
-#: ../templates/ideafolder_view.pt:17
+#: ../templates/suggestionbox_view.pt:17
 msgid "ideasfolder_title"
 msgstr ""
 

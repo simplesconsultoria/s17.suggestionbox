@@ -1,11 +1,10 @@
 #!/bin/bash
-# kudos to Products.Ploneboard for the base for this file
-# ensure that when something is wrong, nothing is broken more than it should...
+
 set -e
 
 # first, create some pot containing anything
-i18ndude rebuild-pot --pot sc.essencis.ideias.pot --create sc.essencis.ideias --merge manual.pot ..
+i18ndude rebuild-pot --pot s17.content.suggestionbox.pot --create s17.content.suggestionbox --merge manual.pot ..
 
 # finally, update the po files
-i18ndude sync --pot sc.essencis.ideias.pot  `find . -iregex '.*\.po$'|grep -v plone`
+i18ndude sync --pot s17.content.suggestionbox.pot  `find . -iregex '.*\.po$'|grep -v plone`
 

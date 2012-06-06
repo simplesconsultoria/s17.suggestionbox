@@ -14,10 +14,10 @@ from plone.app.referenceablebehavior.referenceable import IReferenceable
 from plone.dexterity.interfaces import IDexterityFTI
 from plone.uuid.interfaces import IAttributeUUID
 
-from sc.essencis.ideias.content import IIdea
-from sc.essencis.ideias.testing import INTEGRATION_TESTING
+from s17.content.suggestionbox.content import ISuggestionBox
+from s17.content.suggestionbox.testing import INTEGRATION_TESTING
 
-ctype = 's17.content.suggestionbox.idea'
+ctype = 's17.content.suggestionbox.suggestionbox'
 
 
 class IntegrationTest(unittest.TestCase):
@@ -27,7 +27,7 @@ class IntegrationTest(unittest.TestCase):
     def setUp(self):
         self.portal = self.layer['portal']
         setRoles(self.portal, TEST_USER_ID, ['Manager'])
-        self.portal.invokeFactory('s17.content.suggestionbox.ideafolder', 'test-folder')
+        self.portal.invokeFactory('Folder', 'test-folder')
         setRoles(self.portal, TEST_USER_ID, ['Member'])
         self.folder = self.portal['test-folder']
 
@@ -35,7 +35,7 @@ class IntegrationTest(unittest.TestCase):
         self.obj = self.folder['obj']
 
     def test_adding(self):
-        self.assertTrue(IIdea.providedBy(self.obj))
+        self.assertTrue(ISuggestionBox.providedBy(self.obj))
 
     def test_fti(self):
         fti = queryUtility(IDexterityFTI, name=ctype)
@@ -44,13 +44,13 @@ class IntegrationTest(unittest.TestCase):
     def test_schema(self):
         fti = queryUtility(IDexterityFTI, name=ctype)
         schema = fti.lookupSchema()
-        self.assertEquals(IIdea, schema)
+        self.assertEquals(ISuggestionBox, schema)
 
     def test_factory(self):
         fti = queryUtility(IDexterityFTI, name=ctype)
         factory = fti.factory
         new_object = createObject(factory)
-        self.assertTrue(IIdea.providedBy(new_object))
+        self.assertTrue(ISuggestionBox.providedBy(new_object))
 
     def test_is_referenceable(self):
         self.assertTrue(IReferenceable.providedBy(self.obj))
@@ -59,7 +59,7 @@ class IntegrationTest(unittest.TestCase):
     def test_allowed_content_types(self):
         setRoles(self.portal, TEST_USER_ID, ['Manager'])
 
-        types = ['Image', 'File']
+        types = ['s17.content.suggestionbox.suggestion']
         allowed_types = [t.getId() for t in self.obj.allowedContentTypes()]
         for t in types:
             self.assertTrue(t in allowed_types)
@@ -69,8 +69,7 @@ class IntegrationTest(unittest.TestCase):
                           self.obj.invokeFactory, 'Document', 'foo')
 
         try:
-            self.obj.invokeFactory('Image', 'image')
-            self.obj.invokeFactory('File', 'file')
+            self.obj.invokeFactory('s17.content.suggestionbox.suggestion', 'foo')
         except Unauthorized:
             self.fail()
 

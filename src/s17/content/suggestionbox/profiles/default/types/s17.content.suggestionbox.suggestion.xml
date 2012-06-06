@@ -1,21 +1,22 @@
 <?xml version="1.0"?>
-<object name="sc.essencis.ideias.ideafolder" meta_type="Dexterity FTI"
-   i18n:domain="sc.essencis.ideias" xmlns:i18n="http://xml.zope.org/namespaces/i18n">
+<object name="s17.content.suggestionbox.suggestion" meta_type="Dexterity FTI"
+   i18n:domain="s17.content.suggestionbox" xmlns:i18n="http://xml.zope.org/namespaces/i18n">
 
   <!-- Basic metadata -->
-  <property name="title" i18n:translate="">Panel ideas</property>
+  <property name="title" i18n:translate="">Suggestion</property>
   <property name="description" i18n:translate=""></property>
-  <property name="content_icon">++resource++sc.essencis.ideias/ideafolder_icon.png</property>
-  <property name="factory">sc.essencis.ideias.ideafolder</property>
-  <property name="global_allow">True</property>
+  <property name="content_icon">++resource++s17.content.suggestionbox/suggestion_icon.png</property>
+  <property name="factory">s17.content.suggestionbox.suggestion</property>
+  <property name="global_allow">False</property>
   <property name="filter_content_types">True</property>
   <property name="allowed_content_types">
-      <element value="sc.essencis.ideias.idea"/>
+      <element value="File"/>
+      <element value="Image"/>
   </property>
-  <property name="allow_discussion">False</property>
+  <property name="allow_discussion">True</property>
 
   <!-- schema and class used for content items -->
-  <property name="schema">sc.essencis.ideias.content.IIdeaFolder</property>
+  <property name="schema">s17.content.suggestionbox.content.ISuggestion</property>
   <property name="klass">plone.dexterity.content.Container</property>
 
   <property name="behaviors">
@@ -23,6 +24,7 @@
      <element value="plone.app.dexterity.behaviors.metadata.IDublinCore" />
      <element value="plone.app.referenceablebehavior.referenceable.IReferenceable" />
      <element value="plone.app.relationfield.behavior.IRelatedItems" />
+     <element value="collective.upload.behaviors.IMultipleUpload"/>
    </property>
 
   <!-- View information -->

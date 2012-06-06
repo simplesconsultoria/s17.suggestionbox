@@ -5,10 +5,10 @@ from plone.directives import form
 from plone.app.textfield import RichText
 from plone.namedfile.field import NamedBlobImage
 
-from sc.essencis.ideias import MessageFactory as _
+from s17.content.suggestionbox import MessageFactory as _
 
 
-class IIdeaFolder(form.Schema):
+class ISuggestionBox(form.Schema):
 
     image = NamedBlobImage(
         title=_(u'Image'),
@@ -16,7 +16,7 @@ class IIdeaFolder(form.Schema):
         required=False,
     )
 
-class IIdea(form.Schema):
+class ISuggestion(form.Schema):
 
     text = RichText(
         title=_(u'Body text'),

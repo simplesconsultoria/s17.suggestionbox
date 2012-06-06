@@ -6,20 +6,20 @@ from plone.directives import dexterity
 
 from Products.CMFPlone.utils import getToolByName
 
-from sc.essencis.ideias.content import IIdeaFolder, IIdea
+from s17.content.suggestionbox.content import ISuggestionBox, ISuggestion
 
 grok.templatedir("templates")
 
-class IdeaFolderView(dexterity.DisplayForm):
-    grok.context(IIdeaFolder)
+class SuggestionBoxView(dexterity.DisplayForm):
+    grok.context(ISuggestionBox)
     grok.name("view")
-    grok.template('ideafolder_view')
+    grok.template('suggestionbox_view')
     grok.require("zope2.View")
 
-class IdeaView(dexterity.DisplayForm):
-    grok.context(IIdea)
+class SuggestionView(dexterity.DisplayForm):
+    grok.context(ISuggestion)
     grok.name("view")
-    grok.template('idea_view')
+    grok.template('suggestion_view')
     grok.require('zope2.View')
 
     def images(self):

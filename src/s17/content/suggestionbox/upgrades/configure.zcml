@@ -1,18 +1,16 @@
 <configure
     xmlns="http://namespaces.zope.org/zope"
-    xmlns:five="http://namespaces.zope.org/five"
     xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
-    xmlns:i18n="http://namespaces.zope.org/i18n"
-    i18n_domain="sc.essencis.ideias">
+    i18n_domain="s17.content.suggestionbox">
     
     <!-- Upgrades-->
     <genericsetup:upgradeStep
-        title="Upgrade for sc.essencis.ideias"
+        title="Upgrade for s17.content.suggestionbox"
         description="Initial install"
         source="0.0"
         destination="1000"
         sortkey="1"
-        handler="sc.essencis.ideias.upgrades.to1000.fromZero"
-        profile="sc.essencis.ideias:default" />
+        handler="s17.content.suggestionbox.upgrades.to1000.fromZero"
+        profile="s17.content.suggestionbox:default" />
 
 </configure>

@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: s17.content.suggestionbox\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI +ZONE\n"
-"PO-Revision-Date: 2012-02-20 18:13-0300\n"
+"PO-Revision-Date: 2012-06-06 11:00-0300\n"
 "Last-Translator: Gustavo Lepri <lepri@simplesconsultoria.com.br>\n"
 "Language-Team: Simples Consultoria <lepri@simplesconsultoria.com.br>\n"
 "MIME-Version: 1.0\n"
@@ -22,26 +22,26 @@ msgstr "Corpo do texto"
 msgid "Image"
 msgstr "Imagem"
 
-#: ../profiles/default/types/sc.essencis.ideias.ideafolder.xml
-msgid "Panel ideas"
-msgstr "Painel de suggestionbox"
+#: ../profiles/default/types/s17.content.suggestionbox.suggestion.xml
+msgid "Suggestion"
+msgstr "Sugestão"
 
-#: ../profiles/default/types/sc.essencis.ideias.idea.xml
-msgid "Participation"
-msgstr "Participação"
+#: ../profiles/default/types/s17.content.suggestionbox.suggestionbox.xml
+msgid "Suggestion box"
+msgstr "Caixa de Sugestões"
 
 #. Default: "Files"
-#: ../templates/idea_view.pt:47
+#: ../templates/suggestion_view.pt:47
 msgid "idea_files"
 msgstr "Arquivos"
 
 #. Default: "Images"
-#: ../templates/idea_view.pt:29
+#: ../templates/suggestion_view.pt:29
 msgid "idea_images"
 msgstr "Images"
 
 #. Default: "Participations"
-#: ../templates/ideafolder_view.pt:17
+#: ../templates/suggestionbox_view.pt:17
 msgid "ideasfolder_title"
 msgstr "Participações"
 

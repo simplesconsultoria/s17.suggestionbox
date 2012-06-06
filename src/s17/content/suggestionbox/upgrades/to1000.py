@@ -9,7 +9,7 @@ from Products.GenericSetup.upgrade import listUpgradeSteps
 
 from Products.ZCatalog.ProgressHandler import ZLogHandler
 
-from sc.essencis.ideias.config import PRODUCTS
+from s17.content.suggestionbox.config import PRODUCTS
 
 PROJECT = 's17.content.suggestionbox'
 

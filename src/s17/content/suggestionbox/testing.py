@@ -12,8 +12,8 @@ class Fixture(PloneSandboxLayer):
 
     def setUpZope(self, app, configurationContext):
         # Load ZCML
-        import sc.essencis.ideias
-        self.loadZCML(package=sc.essencis.ideias)
+        import s17.content.suggestionbox
+        self.loadZCML(package=s17.content.suggestionbox)
 
     def setUpPloneSite(self, portal):
         # Install into Plone site using portal_setup

@@ -3,7 +3,7 @@ import doctest
 
 from plone.testing import layered
 
-from sc.essencis.ideias.testing import FUNCTIONAL_TESTING
+from s17.content.suggestionbox.testing import FUNCTIONAL_TESTING
 
 
 def test_suite():
