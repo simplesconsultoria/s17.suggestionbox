@@ -3,30 +3,36 @@ import os
 from setuptools import setup, find_packages
 
 version = '0.1'
+long_description = open("README.txt").read() + "\n" + \
+                   open(os.path.join("docs", "INSTALL.txt")).read() + "\n" + \
+                   open(os.path.join("docs", "CREDITS.txt")).read() + "\n" + \
+                   open(os.path.join("docs", "HISTORY.txt")).read()
 
 setup(name='s17.content.suggestionbox',
       version=version,
       description="",
-      long_description=open("README.rst").read() + "\n" +
-                       open(os.path.join("docs", "INSTALL.txt")).read() + "\n" +
-                       open(os.path.join("docs", "CREDITS.txt")).read() + "\n" +
-                       open(os.path.join("docs", "HISTORY.txt")).read(),
+      long_description=long_description,
       classifiers=[
         "Development Status :: 3 - Alpha",
+        "Environment :: Web Environment",
+        "Framework :: Plone",
         "Framework :: Plone :: 4.1",
+        "Framework :: Plone :: 4.2",
+        "Intended Audience :: End Users/Desktop",
+        "Intended Audience :: System Administrators",
         "License :: OSI Approved :: GNU General Public License (GPL)",
         "Operating System :: OS Independent",
         "Programming Language :: JavaScript",
         "Programming Language :: Python",
-        "Topic :: Internet :: WWW/HTTP",
-        "Topic :: Internet :: WWW/HTTP :: Dynamic Content",
+        "Programming Language :: Python :: 2.6",
+        "Programming Language :: Python :: 2.7",
         "Topic :: Software Development :: Libraries :: Python Modules",
         ],
       keywords='python plone zope simples_consultoria',
       author='Simples Consultoria',
       author_email='products@simplesconsultoria.com.br',
       url='http://www.simplesconsultoria.com.br',
-      license='gpl',
+      license='GPL',
       packages=find_packages('src'),
       package_dir={'': 'src'},
       namespace_packages=['s17', 's17.content'],

@@ -9,5 +9,5 @@ develop-eggs/
 downloads/
 eggs/
 parts/
+src/collective.upload/
 var/
-

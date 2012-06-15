@@ -1,7 +1,10 @@
 Changelog
 ----------
 
+Because you have to know where your towel is.
+
 0.1 (unreleased)
 ^^^^^^^^^^^^^^^^
 
- * Development and implementation [lepri]
+- Initial release.
+
