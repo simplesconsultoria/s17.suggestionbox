@@ -40,6 +40,7 @@ setup(name='s17.content.suggestionbox',
       zip_safe=False,
       install_requires=[
         'setuptools',
+        'Products.CMFPlone>=4.1',
         'plone.app.dexterity>=1.2.1',
         'plone.app.referenceablebehavior',
         'plone.app.relationfield',
