@@ -10,11 +10,13 @@ from s17.content.suggestionbox.content import ISuggestionBox, ISuggestion
 
 grok.templatedir("templates")
 
+
 class SuggestionBoxView(dexterity.DisplayForm):
     grok.context(ISuggestionBox)
     grok.name("view")
     grok.template('suggestionbox_view')
     grok.require("zope2.View")
+
 
 class SuggestionView(dexterity.DisplayForm):
     grok.context(ISuggestion)

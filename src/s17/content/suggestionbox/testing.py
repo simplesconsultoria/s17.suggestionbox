@@ -18,10 +18,6 @@ class Fixture(PloneSandboxLayer):
     def setUpPloneSite(self, portal):
         # Install into Plone site using portal_setup
         self.applyProfile(portal, 's17.content.suggestionbox:default')
-        pl = portal.portal_languages
-        if pl.getDefaultLanguage() != 'pt-br':
-            pl.setDefaultLanguage('pt-br')
-
 
 FIXTURE = Fixture()
 INTEGRATION_TESTING = IntegrationTesting(

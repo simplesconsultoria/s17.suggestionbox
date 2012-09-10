@@ -7,7 +7,10 @@ s17.content.suggestionbox
 Overview
 --------
 
-Package to insert boxes to include suggestions, ideias in there
+A package containing a Dexterity content type and behaviors to provide a
+structure for managing ideas and suggestions. It permits to include images
+and files in an idea/suggestion.
+
 
 Mostly Harmless
 ---------------
