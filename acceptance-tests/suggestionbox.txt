@@ -1,0 +1,86 @@
+*** Settings ***
+
+Resource  plone.txt
+
+Suite Setup  Setup
+
+*** Variables ***
+
+*** Test cases ***
+
+Test Add Suggestion Box
+    Goto Homepage
+    Add Suggestion Box  A suggestion box
+    Open Menu  plone-contentmenu-workflow
+    Click Link  css=a#workflow-transition-publish
+    Page Should Contain  Item state changed
+
+Test Add Suggestion
+    Goto Homepage
+    Click Link  A suggestion box
+    Add Suggestion  A suggestion
+    Open Menu  plone-contentmenu-workflow
+    Click Link  css=a#workflow-transition-publish
+    Page Should Contain  Item state changed
+    Click Button  css=input#a-suggestion_submit_like
+
+Test Add File
+    Goto Homepage
+    Click Link  A suggestion box
+    Click Link  A suggestion
+    Add File  ${PATH}/test.sxw
+    Click Link  A suggestion
+    Add File  ${PATH}/test.zip
+
+Test Add Image
+    Goto Homepage
+    Click Link  A suggestion box
+    Click Link  A suggestion
+    Add Image  ${PATH}/test.gif
+
+*** Keywords ***
+
+Setup
+    Log In  admin  admin
+
+
+Add Suggestion Box
+    [arguments]  ${title}
+
+    Open Add New Menu
+    Click Link  css=a#s17-content-suggestionbox-suggestionbox
+    Page Should Contain  Add Suggestion box
+    Input Text  css=input#form-widgets-IDublinCore-title  ${title}
+    Click Button  Save
+    Page Should Contain  Item created
+
+Add Suggestion
+    [arguments]  ${title}
+
+    Open Add New Menu
+    Click Link  css=a#s17-content-suggestionbox-suggestion
+    Page Should Contain  Add Suggestion
+    Input Text  css=input#form-widgets-IDublinCore-title  ${title}
+    Click Button  Save
+    Page Should Contain  Item created
+
+Add File
+    [arguments]  ${file}
+
+    Open Add New Menu
+    Click Link  css=a#file
+    Choose File  css=input#file_file  ${file}
+    Click Button  Save
+    Page Should Contain  Changes saved
+
+Add Image
+    [arguments]  ${image}
+
+    Open Add New Menu
+    Click Link  css=a#image
+    Choose File  css=input#image_file  ${image}
+    Click Button  Save
+    Page Should Contain  Changes saved
+
+
+
