@@ -16,6 +16,7 @@ class ISuggestionBox(form.Schema):
         required=False,
     )
 
+
 class ISuggestion(form.Schema):
 
     text = RichText(

@@ -11,7 +11,7 @@ def fromZero(context):
     ''' Upgrade from Zero to version 1000
     '''
 
-    qi = getToolByName(context,'portal_quickinstaller')
+    qi = getToolByName(context, 'portal_quickinstaller')
 
     # Install dependencies for this upgrade
     # List package names
@@ -20,9 +20,9 @@ def fromZero(context):
                  'cioppino.twothumbs',
                ]
     # (name,locked,hidden,install,profile,runProfile)
-    dependencies = [(name,locked,hidden,profile) for name,locked,hidden,install,
-                                                     profile,runProfile in
+    dependencies = [(name, locked, hidden, profile) for name, locked, hidden, install,
+                                                     profile, runProfile in
                     PRODUCTS if ((name in packages) and install)]
 
-    for name,locked,hidden,profile in dependencies:
+    for name, locked, hidden, profile in dependencies:
         qi.installProduct(name, locked=locked, hidden=hidden, profile=profile)

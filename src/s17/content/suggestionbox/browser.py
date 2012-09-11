@@ -25,17 +25,17 @@ class SuggestionView(dexterity.DisplayForm):
     grok.require('zope2.View')
 
     def images(self):
-        ct = getToolByName(self.context,'portal_catalog')
-        images = ct(portal_type='Image',path = '/'.join(self.context.getPhysicalPath()))
+        ct = getToolByName(self.context, 'portal_catalog')
+        images = ct(portal_type='Image', path='/'.join(self.context.getPhysicalPath()))
         if images:
-            images = [ image.getObject() for image in images ]
+            images = [image.getObject() for image in images]
             return images
         else:
             return None
 
     def files(self):
-        ct = getToolByName(self.context,'portal_catalog')
-        files = ct(portal_type='File',path = '/'.join(self.context.getPhysicalPath()))
+        ct = getToolByName(self.context, 'portal_catalog')
+        files = ct(portal_type='File', path='/'.join(self.context.getPhysicalPath()))
         if files:
             return files
         else:
