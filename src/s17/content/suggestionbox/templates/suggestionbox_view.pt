@@ -7,8 +7,21 @@
       i18n:domain="s17.content.suggestionbox">
 <body>
 
-<metal:main fill-slot="content-core">
-    <tal:main-macro metal:define-macro="content-core">
+<metal:main fill-slot="main">
+    <tal:main-macro metal:define-macro="main">
+
+        <div tal:content="structure here/@@rate-if-you-dare"/>
+
+        <div tal:replace="structure provider:plone.abovecontenttitle" />
+
+        <h1 class="documentFirstHeading" tal:content="context/title" />
+
+        <div tal:replace="structure provider:plone.belowcontenttitle" />
+
+        <p class="documentDescription" tal:content="context/description" />
+
+        <div tal:replace="structure provider:plone.abovecontentbody" />
+
         <div class="newsImageContainer" tal:condition="context/image">
             <img tal:define="image context/@@images"
                  tal:replace="structure python:image.scale('image', scale='mini').tag()" />
@@ -29,6 +42,13 @@
                                        title file/Title;">
                         <span tal:replace="file/Title">Title</span>
                     </a>
+
+                    <p class="tileBody" tal:condition="file/description">
+                        <span class="description" tal:content="file/description">
+                            description
+                        </span>
+                    </p>
+
                 </tal:block>
             </li>
         </ul>
