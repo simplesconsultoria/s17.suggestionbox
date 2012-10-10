@@ -1,12 +1,11 @@
 <?xml version="1.0"?>
-<object name="s17.content.suggestionbox.suggestion" meta_type="Dexterity FTI"
-   i18n:domain="s17.content.suggestionbox" xmlns:i18n="http://xml.zope.org/namespaces/i18n">
+<object name="Suggestion" meta_type="Dexterity FTI"
+   i18n:domain="s17.suggestionbox" xmlns:i18n="http://xml.zope.org/namespaces/i18n">
 
   <!-- Basic metadata -->
   <property name="title" i18n:translate="">Suggestion</property>
   <property name="description" i18n:translate=""></property>
-  <property name="content_icon">++resource++s17.content.suggestionbox/suggestion_icon.png</property>
-  <property name="factory">s17.content.suggestionbox.suggestion</property>
+  <property name="content_icon">++resource++s17.suggestionbox/suggestion_icon.png</property>
   <property name="global_allow">False</property>
   <property name="filter_content_types">True</property>
   <property name="allowed_content_types">
@@ -16,7 +15,7 @@
   <property name="allow_discussion">True</property>
 
   <!-- schema and class used for content items -->
-  <property name="schema">s17.content.suggestionbox.content.ISuggestion</property>
+  <property name="schema">s17.suggestionbox.content.ISuggestion</property>
   <property name="klass">plone.dexterity.content.Container</property>
 
   <property name="behaviors">

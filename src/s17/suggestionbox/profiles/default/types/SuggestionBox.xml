@@ -1,21 +1,20 @@
 <?xml version="1.0"?>
-<object name="s17.content.suggestionbox.suggestionbox" meta_type="Dexterity FTI"
-   i18n:domain="s17.content.suggestionbox" xmlns:i18n="http://xml.zope.org/namespaces/i18n">
+<object name="SuggestionBox" meta_type="Dexterity FTI"
+   i18n:domain="s17.suggestionbox" xmlns:i18n="http://xml.zope.org/namespaces/i18n">
 
   <!-- Basic metadata -->
   <property name="title" i18n:translate="">Suggestion box</property>
   <property name="description" i18n:translate=""></property>
-  <property name="content_icon">++resource++s17.content.suggestionbox/suggestionbox_icon.png</property>
-  <property name="factory">s17.content.suggestionbox.suggestionbox</property>
+  <property name="content_icon">++resource++s17.suggestionbox/suggestionbox_icon.png</property>
   <property name="global_allow">True</property>
   <property name="filter_content_types">True</property>
   <property name="allowed_content_types">
-      <element value="s17.content.suggestionbox.suggestion"/>
+      <element value="Suggestion"/>
   </property>
   <property name="allow_discussion">False</property>
 
   <!-- schema and class used for content items -->
-  <property name="schema">s17.content.suggestionbox.content.ISuggestionBox</property>
+  <property name="schema">s17.suggestionbox.content.ISuggestionBox</property>
   <property name="klass">plone.dexterity.content.Container</property>
 
   <property name="behaviors">
