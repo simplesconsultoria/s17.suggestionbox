@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: s17.content.suggestionbox\n"
+"Project-Id-Version: s17.suggestionbox\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "PO-Revision-Date: 2012-06-06 11:00-0300\n"
 "Last-Translator: Gustavo Lepri <lepri@simplesconsultoria.com.br>\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Language-Code: pt-br\n"
 "Language-Name: Brazilian Portuguese\n"
 "Preferred-Encodings: utf-8 latin1\n"
-"Domain: s17.content.suggestionbox\n"
+"Domain: s17.suggestionbox\n"
 
 #: ../content.py:22
 msgid "Body text"
@@ -22,11 +22,11 @@ msgstr "Corpo do texto"
 msgid "Image"
 msgstr "Imagem"
 
-#: ../profiles/default/types/s17.content.suggestionbox.suggestion.xml
+#: ../profiles/default/types/s17.suggestionbox.suggestion.xml
 msgid "Suggestion"
 msgstr "Sugestão"
 
-#: ../profiles/default/types/s17.content.suggestionbox.suggestionbox.xml
+#: ../profiles/default/types/s17.suggestionbox.suggestionbox.xml
 msgid "Suggestion box"
 msgstr "Caixa de Sugestões"
 

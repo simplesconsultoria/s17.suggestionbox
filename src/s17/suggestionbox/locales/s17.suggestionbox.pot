@@ -26,11 +26,11 @@ msgstr ""
 msgid "Image"
 msgstr ""
 
-#: ../profiles/default/types/s17.content.suggestionbox.suggestion.xml
+#: ../profiles/default/types/s17.suggestionbox.suggestion.xml
 msgid "Suggestion"
 msgstr ""
 
-#: ../profiles/default/types/s17.content.suggestionbox.suggestionbox.xml
+#: ../profiles/default/types/s17.suggestionbox.suggestionbox.xml
 msgid "Suggestion box"
 msgstr ""
 
