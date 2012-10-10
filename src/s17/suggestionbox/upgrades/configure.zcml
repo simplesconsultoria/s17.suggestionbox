@@ -1,16 +1,16 @@
 <configure
     xmlns="http://namespaces.zope.org/zope"
     xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
-    i18n_domain="s17.content.suggestionbox">
+    i18n_domain="s17.suggestionbox">
     
     <!-- Upgrades-->
     <genericsetup:upgradeStep
-        title="Upgrade for s17.content.suggestionbox"
+        title="Upgrade for s17.suggestionbox"
         description="Initial install"
         source="0.0"
         destination="1000"
         sortkey="1"
-        handler="s17.content.suggestionbox.upgrades.to1000.fromZero"
-        profile="s17.content.suggestionbox:default" />
+        handler="s17.suggestionbox.upgrades.to1000.fromZero"
+        profile="s17.suggestionbox:default" />
 
 </configure>

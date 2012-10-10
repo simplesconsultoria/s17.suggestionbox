@@ -7,7 +7,7 @@ def uninstall(portal, reinstall=False):
     if not reinstall:
         # normal uninstall
         setup_tool = getToolByName(portal, 'portal_setup')
-        profile = 'profile-s17.content.suggestionbox:uninstall'
+        profile = 'profile-s17.suggestionbox:uninstall'
         setup_tool.runAllImportStepsFromProfile(profile)
 
         return "Ran all uninstall steps."

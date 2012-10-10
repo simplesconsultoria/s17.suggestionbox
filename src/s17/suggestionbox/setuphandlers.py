@@ -6,14 +6,14 @@ from Products.CMFCore.utils import getToolByName
 from Products.GenericSetup.upgrade import listUpgradeSteps
 
 
-_PROJECT = 's17.content.suggestionbox'
-_PROFILE_ID = 's17.content.suggestionbox:default'
+_PROJECT = 's17.suggestionbox'
+_PROFILE_ID = 's17.suggestionbox:default'
 
 
 def run_upgrades(context):
     ''' Run Upgrade steps
     '''
-    if context.readDataFile('s17.content.suggestionbox-default.txt') is None:
+    if context.readDataFile('s17.suggestionbox-default.txt') is None:
         return
     logger = logging.getLogger(_PROJECT)
     site = context.getSite()

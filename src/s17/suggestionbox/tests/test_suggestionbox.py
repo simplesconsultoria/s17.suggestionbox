@@ -14,10 +14,10 @@ from plone.app.referenceablebehavior.referenceable import IReferenceable
 from plone.dexterity.interfaces import IDexterityFTI
 from plone.uuid.interfaces import IAttributeUUID
 
-from s17.content.suggestionbox.content import ISuggestionBox
-from s17.content.suggestionbox.testing import INTEGRATION_TESTING
+from s17.suggestionbox.content import ISuggestionBox
+from s17.suggestionbox.testing import INTEGRATION_TESTING
 
-ctype = 's17.content.suggestionbox.suggestionbox'
+ctype = 'SuggestionBox'
 
 
 class IntegrationTest(unittest.TestCase):
@@ -59,7 +59,7 @@ class IntegrationTest(unittest.TestCase):
     def test_allowed_content_types(self):
         setRoles(self.portal, TEST_USER_ID, ['Manager'])
 
-        types = ['s17.content.suggestionbox.suggestion']
+        types = ['s17.suggestionbox.suggestion']
         allowed_types = [t.getId() for t in self.obj.allowedContentTypes()]
         for t in types:
             self.assertTrue(t in allowed_types)
@@ -69,7 +69,7 @@ class IntegrationTest(unittest.TestCase):
                           self.obj.invokeFactory, 'Document', 'foo')
 
         try:
-            self.obj.invokeFactory('s17.content.suggestionbox.suggestion', 'foo')
+            self.obj.invokeFactory('s17.suggestionbox.suggestion', 'foo')
         except Unauthorized:
             self.fail()
 

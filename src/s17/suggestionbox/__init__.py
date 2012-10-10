@@ -2,4 +2,4 @@
 
 from zope.i18nmessageid import MessageFactory as BaseMessageFactory
 
-MessageFactory = BaseMessageFactory('s17.content.suggestionbox')
+MessageFactory = BaseMessageFactory('s17.suggestionbox')

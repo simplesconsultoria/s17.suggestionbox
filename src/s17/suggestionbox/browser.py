@@ -6,7 +6,7 @@ from plone.directives import dexterity
 
 from Products.CMFPlone.utils import getToolByName
 
-from s17.content.suggestionbox.content import ISuggestionBox, ISuggestion
+from s17.suggestionbox.content import ISuggestionBox, ISuggestion
 
 grok.templatedir("templates")
 

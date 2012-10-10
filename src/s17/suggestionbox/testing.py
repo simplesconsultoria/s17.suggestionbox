@@ -12,19 +12,19 @@ class Fixture(PloneSandboxLayer):
 
     def setUpZope(self, app, configurationContext):
         # Load ZCML
-        import s17.content.suggestionbox
-        self.loadZCML(package=s17.content.suggestionbox)
+        import s17.suggestionbox
+        self.loadZCML(package=s17.suggestionbox)
 
     def setUpPloneSite(self, portal):
         # Install into Plone site using portal_setup
-        self.applyProfile(portal, 's17.content.suggestionbox:default')
+        self.applyProfile(portal, 's17.suggestionbox:default')
 
 FIXTURE = Fixture()
 INTEGRATION_TESTING = IntegrationTesting(
     bases=(FIXTURE,),
-    name='s17.content.suggestionbox:Integration',
+    name='s17.suggestionbox:Integration',
     )
 FUNCTIONAL_TESTING = FunctionalTesting(
     bases=(FIXTURE,),
-    name='s17.content.suggestionbox:Functional',
+    name='s17.suggestionbox:Functional',
     )

@@ -3,7 +3,7 @@
 __author__ = """Simples Consultoria <products@simplesconsultoria.com.br>"""
 __docformat__ = 'plaintext'
 
-PROJECTNAME = 's17.content.suggestionbox'
+PROJECTNAME = 's17.suggestionbox'
 
 # PRODUCTS format
 # (name,locked,hidden,install,profile,runProfile)

@@ -2,9 +2,9 @@
 
 from Products.CMFCore.utils import getToolByName
 
-from s17.content.suggestionbox.config import PRODUCTS
+from s17.suggestionbox.config import PRODUCTS
 
-PROJECT = 's17.content.suggestionbox'
+PROJECT = 's17.suggestionbox'
 
 
 def fromZero(context):

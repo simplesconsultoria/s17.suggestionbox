@@ -14,10 +14,10 @@ from plone.app.referenceablebehavior.referenceable import IReferenceable
 from plone.dexterity.interfaces import IDexterityFTI
 from plone.uuid.interfaces import IAttributeUUID
 
-from s17.content.suggestionbox.content import ISuggestion
-from s17.content.suggestionbox.testing import INTEGRATION_TESTING
+from s17.suggestionbox.content import ISuggestion
+from s17.suggestionbox.testing import INTEGRATION_TESTING
 
-ctype = 's17.content.suggestionbox.suggestion'
+ctype = 'Suggestion'
 
 
 class IntegrationTest(unittest.TestCase):
@@ -27,7 +27,7 @@ class IntegrationTest(unittest.TestCase):
     def setUp(self):
         self.portal = self.layer['portal']
         setRoles(self.portal, TEST_USER_ID, ['Manager'])
-        self.portal.invokeFactory('s17.content.suggestionbox.suggestionbox', 'test-folder')
+        self.portal.invokeFactory('SuggestionBox', 'test-folder')
         setRoles(self.portal, TEST_USER_ID, ['Member'])
         self.folder = self.portal['test-folder']
 

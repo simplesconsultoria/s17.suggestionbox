@@ -5,7 +5,7 @@ from plone.directives import form
 from plone.app.textfield import RichText
 from plone.namedfile.field import NamedBlobImage
 
-from s17.content.suggestionbox import MessageFactory as _
+from s17.suggestionbox import MessageFactory as _
 
 
 class ISuggestionBox(form.Schema):
