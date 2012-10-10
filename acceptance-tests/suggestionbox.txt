@@ -48,7 +48,7 @@ Add Suggestion Box
     [arguments]  ${title}
 
     Open Add New Menu
-    Click Link  css=a#s17-content-suggestionbox-suggestionbox
+    Click Link  css=a#suggestionbox
     Page Should Contain  Add Suggestion box
     Input Text  css=input#form-widgets-IDublinCore-title  ${title}
     Click Button  Save
@@ -58,7 +58,7 @@ Add Suggestion
     [arguments]  ${title}
 
     Open Add New Menu
-    Click Link  css=a#s17-content-suggestionbox-suggestion
+    Click Link  css=a#suggestion
     Page Should Contain  Add Suggestion
     Input Text  css=input#form-widgets-IDublinCore-title  ${title}
     Click Button  Save
