@@ -6,7 +6,17 @@ Because you have to know where your towel is.
 1.0a2 (unreleased)
 ^^^^^^^^^^^^^^^^^^
 
-- Nothing changed yet.
+- Test Plone 4.3 compatibility. [lepri]
+
+- Deprecate use on Plone 4.1; we will support only Plone>=4.2. [lepri]
+
+- Fix package i18n. [lepri]
+
+- Rename content type from "s17.content.suggestionbox.suggestionbox" to "SuggestionBox". [lepri]
+
+- Rename content type from "s17.content.suggestionbox.suggestion" to "Suggestion". [lepri]
+
+- Rename package from s17.content.suggestionbox to s17.suggestionbox. [lepri]
 
 
 1.0a1 (2012-06-21)

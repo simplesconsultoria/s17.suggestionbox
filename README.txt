@@ -15,10 +15,10 @@ and files in an idea/suggestion.
 Mostly Harmless
 ---------------
 
-.. image:: https://secure.travis-ci.org/simplesconsultoria/s17.content.suggestionbox.png
-    :target: http://travis-ci.org/simplesconsultoria/s17.content.suggestionbox
+.. image:: https://secure.travis-ci.org/simplesconsultoria/s17.suggestionbox.png
+    :target: http://travis-ci.org/simplesconsultoria/s17.suggestionbox
 
 Have an idea? Found a bug? Let us know by `opening a support ticket`_.
 
-.. _`opening a support ticket`: https://github.com/simplesconsultoria/s17.content.suggestionbox/issues
+.. _`opening a support ticket`: https://github.com/simplesconsultoria/s17.suggestionbox/issues
 
