@@ -59,7 +59,7 @@ class IntegrationTest(unittest.TestCase):
     def test_allowed_content_types(self):
         setRoles(self.portal, TEST_USER_ID, ['Manager'])
 
-        types = ['s17.suggestionbox.suggestion']
+        types = ['Suggestion']
         allowed_types = [t.getId() for t in self.obj.allowedContentTypes()]
         for t in types:
             self.assertTrue(t in allowed_types)
@@ -69,7 +69,7 @@ class IntegrationTest(unittest.TestCase):
                           self.obj.invokeFactory, 'Document', 'foo')
 
         try:
-            self.obj.invokeFactory('s17.suggestionbox.suggestion', 'foo')
+            self.obj.invokeFactory('Suggestion', 'foo')
         except Unauthorized:
             self.fail()
 
