@@ -1,12 +1,10 @@
-Changelog
-----------
-
-Because you have to know where your towel is.
+There's a frood who really knows where his towel is
+---------------------------------------------------
 
 1.0b2 (unreleased)
 ^^^^^^^^^^^^^^^^^^
 
-- Nothing changed yet.
+- Package dependencies were fixed. [hvelarde]
 
 
 1.0b1 (2013-07-10)
@@ -18,9 +16,11 @@ Because you have to know where your towel is.
 
 - Fix package i18n. [lepri]
 
-- Rename content type from "s17.content.suggestionbox.suggestionbox" to "SuggestionBox". [lepri]
+- Rename content type from "s17.content.suggestionbox.suggestionbox" to
+  "SuggestionBox". [lepri]
 
-- Rename content type from "s17.content.suggestionbox.suggestion" to "Suggestion". [lepri]
+- Rename content type from "s17.content.suggestionbox.suggestion" to
+  "Suggestion". [lepri]
 
 - Rename package from s17.content.suggestionbox to s17.suggestionbox. [lepri]
 
@@ -28,5 +28,5 @@ Because you have to know where your towel is.
 1.0a1 (2012-06-21)
 ^^^^^^^^^^^^^^^^^^
 
- - Initial release.
+- Initial release.
 
