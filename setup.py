@@ -13,7 +13,7 @@ setup(name='s17.suggestionbox',
       description="",
       long_description=long_description,
       classifiers=[
-          "Development Status :: 3 - Alpha",
+          "Development Status :: 4 - Beta",
           "Environment :: Web Environment",
           "Framework :: Plone",
           "Framework :: Plone :: 4.2",
