@@ -16,4 +16,12 @@
 
     <i18n:registerTranslations directory="locales" />
 
+    <!-- five.grok 1.3.2 will not register this by itself -->
+    <browser:resourceDirectory
+        name="s17.suggestionbox"
+        directory="static"
+        />
+
+
+
 </configure>
